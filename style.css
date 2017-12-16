@@ -1,0 +1,16 @@
+body {
+    background: #fefefe;
+}
+h1 {
+    color: lightsalmon;
+    text-align: center;
+}
+a{
+    width: 100px;
+    height: 20px;
+    margin-top: 20px;
+    color: #fff;
+    text-align: center;
+    display: block;
+    background: #111;
+}

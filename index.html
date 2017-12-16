@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Koa-sp</title>
+    <link rel="stylesheet" href="./style.css">
+    <script>
+        var host='http://'+location.host;
+    </script>
+</head>
+<body>
+    <h1>参考null的Tiny Koa所写</h1>
+    <button id="fetchData">post Data</button>
+    <br>
+    <a href="http://localhost:8000/haha">get</a>
+</body>
+<script>
+    fetchData.onclick = () => {
+
+        fetch(host+'/api/fetch',
+            {
+            method: 'post',
+            mode: 'cors',
+            headers: {'Content-Type': 'application/json'}
+            ,
+            body: JSON.stringify({
+            sp: 'koa-sp'
+        })}).then(response => response.json())
+            .then(data => console.log(data))
+            .catch(e => console.log("error", e));
+    }
+</script>
+</html>
